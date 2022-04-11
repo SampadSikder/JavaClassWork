@@ -1,0 +1,12 @@
+public class UnsynchronizedBuffer implements Buffer {
+    private int buffer=-1;
+
+    public void set(int value){
+        System.out.printf("Producer wrote\t %2d",value);
+        buffer=value;
+    }
+    public int get() throws Exception{
+        System.out.printf("Consumer read\t %2d",buffer);
+        return buffer;
+    }
+}
